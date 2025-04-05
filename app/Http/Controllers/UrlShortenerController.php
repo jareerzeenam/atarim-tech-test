@@ -22,4 +22,16 @@ class UrlShortenerController extends Controller
 
         return response()->json(['short_url' => $shortUrl]);
     }
+
+    public function decode(UrlRequest $request)
+    {
+        $originalUrl = $this->shortener->decode($request->input('url'));
+
+        if (!$originalUrl) {
+            return response()->json(['error' => 'URL not found'], 404);
+        }
+
+        return response()->json(['original_url' => $originalUrl]);
+
+    }
 }
