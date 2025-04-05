@@ -111,6 +111,7 @@ You can use Postman to test the API endpoints.
 }
 ```
 ### 3. Test Invalid URLs
+![URL Invalid](https://github.com/jareerzeenam/atarim-tech-test/blob/master/public/assets/Invalid.png)
 - **Method**: POST
 - **URL**: `http://localhost:8000/api/decode`
 - **Body**: 
