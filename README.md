@@ -76,7 +76,7 @@ Tests will check that the URL encoding and decoding functionalities work as expe
 ## Testing with Postman
 You can use Postman to test the API endpoints.
 
-![URL Encode](https://github.com/jareerzeenam/atarim-tech-test/blob/main/public/assets/Encode.png)
+![URL Encode](https://github.com/jareerzeenam/atarim-tech-test/blob/master/public/assets/Encode.png)
 
 ### 1. Encode a URL
 - **Method**: POST
@@ -93,7 +93,8 @@ You can use Postman to test the API endpoints.
     "short_url": "http://localhost:8000/f2912d"
 }
 ```
-![URL Decode](https://github.com/jareerzeenam/atarim-tech-test/blob/main/public/assets/Decode.png)
+![URL Decode](https://github.com/jareerzeenam/atarim-tech-test/blob/master/public/assets/Decode.png)
+
 ### 2. Decode a URL
 - **Method**: POST
 - **URL**: `http://localhost:8000/api/decode`
