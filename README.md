@@ -9,6 +9,8 @@ This is a simple URL shortening service built with Laravel. It provides two endp
 
 - Shorten a long URL into a short URL.
 - Decode a short URL back to its original URL.
+- Check for existing URLs to return the same short URL if the URL has already been shortened.
+
 ## Requirements
 
 - PHP >= 8.2
