@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UrlRequest;
 use App\Services\UrlShortenerService;
-use Illuminate\Http\Request;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class UrlShortenerController extends Controller
 {
@@ -15,6 +16,10 @@ class UrlShortenerController extends Controller
         $this->shortener = $shortener;
     }
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function encode(UrlRequest $request)
     {
 
@@ -23,6 +28,11 @@ class UrlShortenerController extends Controller
         return response()->json(['short_url' => $shortUrl]);
     }
 
+
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function decode(UrlRequest $request)
     {
         $originalUrl = $this->shortener->decode($request->input('url'));
